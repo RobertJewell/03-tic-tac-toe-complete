@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Tic Tac Toe - "Complete"
 
-## Getting Started
+Because nothing says "I'm kinda new to this" like naming a git repo "complete"
+Really this is just the version I ended up with after 5 hours or so.
 
-First, run the development server:
+**...or so?**
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Fine. Maybe a little more.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Thanks to a busy week this was broken up into chunks, so plenty of time was spent thinking about it while doing other stuff.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This is likely 4 - 5 hours typing/troubleshooting but longer if we include time spent reading docs and thinking how best to approach this.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**...so it's well thought out?**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+...
 
-## Learn More
+It's not _not_ thought through. (wow, english language) But there is a lot that could be done with a refactor or 2.
 
-To learn more about Next.js, take a look at the following resources:
+It has a far heavier tech stack than it needs (more details at the end of this readme)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Live version
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+https://03-tic-tac-toe-complete.vercel.app/
 
-## Deploy on Vercel
+## Highlights
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Index.js is now using the game state to show different screens, this is partly for readbility and debugging, and partly to make it easier to expand later.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The state is now being managed by Zustand, think of this as a combination of the useState hook and React Context.
+
+It looks nicer. I've used tailwindCSS purely for speed.
+
+The history is now a dropdown using headlessUI.
+This achieves two things:
+
+- The everything resizes nicely, we still have access to everything we need on mobile.
+- The dropdown is pretty accessible (full keyboard navigation)
+
+The winning combination is shown in the event of a win.
+
+## Tech Stack
+
+- NextJS
+- State managment with Zustand (no more prop drilling)
+- Styling with TailwindCSS
+- Animation with Framer Motion
+
+## Roadmap
+
+If I have free time there's loads that could be added here:
+
+- Dark mode (Zustand makes it very easy to have things like this use Local storage too)
+
+- An SVG board in the history dropdown showing which sqaures were filled on each move
+
+- A "setup" game stage where we can add:
+
+  - Custom player names
+  - Custom player icons (svg to allow for...)
+  - Custom player colors
+
+- More animations (using framer motion's animatePresence conponent to create smooth transitions between game stages)
