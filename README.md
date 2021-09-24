@@ -33,7 +33,7 @@ If I have free time there's loads that could be added here:
 
 - Dark mode (Zustand makes it very easy to have things like this use Local storage too)
 
-- An SVG board in the history dropdown showing which sqaures were filled on each move
+- An SVG board in the history dropdown showing which squares were filled on each move
 
 - A "setup" game stage where we can add:
 
