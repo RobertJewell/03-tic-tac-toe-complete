@@ -1,23 +1,4 @@
-# React Tic Tac Toe - "Complete"
-
-Because nothing says "I'm kinda new to this" like naming a git repo "complete"
-Really this is just the version I ended up with after 5 hours or so.
-
-**...or so?**
-
-Fine. Maybe a little more.
-
-Thanks to a busy week this was broken up into chunks, so plenty of time was spent thinking about it while doing other stuff.
-
-This is likely 4 - 5 hours typing/troubleshooting but longer if we include time spent reading docs and thinking how best to approach this.
-
-**...so it's well thought out?**
-
-...
-
-It's not _not_ thought through. (wow, english language) But there is a lot that could be done with a refactor or 2.
-
-It has a far heavier tech stack than it needs (more details at the end of this readme)
+# React Tic Tac Toe - Complete
 
 ## Live version
 
